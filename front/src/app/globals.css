@@ -1,0 +1,113 @@
+:root {
+  --main-blue: #004ea2;
+  --light-blue: #7cbbff;
+  --light-gray: #f7f7f7;
+  --dark-gray: #afafaf;
+  --dark-blue: #002246;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.title-big {
+  font-size: 55px;
+  line-height: 55px;
+  text-transform: uppercase;
+}
+
+.white {
+  color: white;
+}
+
+.blue {
+  color: var(--main-blue);
+}
+
+.title-medium {
+  font-size: 45px;
+  line-height: 45px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.title-small {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+button {
+  border-radius: 10px;
+}
+
+.button-blue {
+  background-color: var(--main-blue);
+  color: white;
+  text-transform: uppercase;
+  border: 2px solid var(--main-blue);
+  transition: 0.2s ease;
+}
+
+.button-blue:hover {
+  color: var(--main-blue);
+  background-color: transparent;
+  transition: background-color 0.2s ease;
+}
+
+.button-white {
+  background-color: white;
+  color: var(--main-blue);
+  text-transform: uppercase;
+  border: 2px solid white;
+  transition: 0.2s ease;
+}
+
+.button-white:hover {
+  background-color: transparent;
+  color: white;
+  transition: 0.2s ease;
+}
+
+.mt {
+  margin-top: 40px;
+}
+
+.border-bottom {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--main-blue) !important;
+}
+
+.container {
+  margin-left: 15rem;
+  margin-right: 15rem;
+}
+
+@media screen and (max-width: 740px) {
+  .container {
+    margin: 0 1.25rem;
+  }
+}

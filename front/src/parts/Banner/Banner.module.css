@@ -1,0 +1,55 @@
+.bannerCard {
+  width: 100%;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: -1px 4px 28px 8px rgba(34, 60, 80, 0.16);
+  -moz-box-shadow: -1px 4px 28px 8px rgba(34, 60, 80, 0.16);
+  box-shadow: -1px 4px 28px 8px rgba(34, 60, 80, 0.16);
+}
+
+.bannerImageContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.bannerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bannerInfo {
+  z-index: 1;
+  grid-column: 9 / span 4;
+  height: 100%;
+  background-color: var(--main-blue);
+  padding: 40px;
+  color: white;
+}
+
+.bannerTextContainer {
+  margin-top: 50px;
+}
+
+.bannerTitle {
+  margin: 1rem 0;
+  color: white;
+}
+
+.bannerButton {
+  padding: 1rem 4rem;
+  margin-top: 2rem;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}

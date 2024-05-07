@@ -1,0 +1,36 @@
+.sectionContainer {
+  background-color: var(--dark-blue);
+  padding: 70px 0;
+}
+
+.newsListTitle {
+  margin-bottom: 40px;
+}
+
+.newsCardSlide {
+  width: 100%;
+  overflow: hidden;
+}
+
+.newsCardContainer {
+  width: auto;
+  height: 400px;
+  background-image: url("../../../public/1.png");
+  background-size: cover;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-align: center;
+  justify-content: flex-end;
+  padding: 0 20px 80px 20px;
+}
+
+.newsCardSlide:nth-child(2n) .newsCardContainer {
+  background-image: url("../../../public/2.png");
+}
+
+.newsMiniCardTest {
+  margin: 1rem 0;
+}

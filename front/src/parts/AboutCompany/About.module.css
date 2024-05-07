@@ -1,0 +1,38 @@
+.sectionContainer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.bigCard {
+  grid-area: span 2 / span 7; /* Один большой блок занимает две колонки */
+}
+
+.smallCard {
+  grid-area: span 1 / span 5;
+}
+
+.cardImageContainer {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.sectionTitle {
+  color: var(--main-blue);
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.aboutText {
+  color: var(--main-blue);
+}
