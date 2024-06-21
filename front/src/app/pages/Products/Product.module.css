@@ -1,0 +1,97 @@
+.productContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 25px;
+  grid-row-gap: 0px;
+}
+.productImagesSlider {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.swiperImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.descriptContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.productButton {
+  font-size: 18px;
+  padding: 0.5rem;
+}
+
+.descText {
+  margin-top: 2rem;
+}
+
+.popSwiper {
+  width: 80vh;
+  height: auto;
+}
+
+.previewGallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 0px;
+}
+.previewGallery img:nth-child(1) {
+  grid-column: span 5;
+}
+
+.previewImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.productCharacteristics {
+  margin-top: 2rem;
+}
+
+/* Основные стили */
+.productCharacteristics table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.productCharacteristics th,
+.productCharacteristics td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Стили для заголовков */
+.productCharacteristics th {
+  background-color: #004ea2;
+  color: white;
+}
+
+/* Чередующиеся строки */
+.productCharacteristics tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Стили для hover */
+.productCharacteristics tr:hover {
+  background-color: #d4d4d4;
+}
+
+.productPrice {
+  display: block;
+  margin: 1rem 0;
+  font-size: 45px;
+  color: red;
+  font-weight: bold;
+}

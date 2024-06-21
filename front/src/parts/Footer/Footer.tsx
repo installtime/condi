@@ -4,7 +4,7 @@ import FooterLogo from "@/app/Images/Footer";
 
 const Footer = () => {
   return (
-    <footer className={`${styles.footerBack}`}>
+    <footer className={`${styles.footerBack} mt`}>
       <div className={`container`}>
         <div>
           <div>

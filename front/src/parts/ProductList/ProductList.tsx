@@ -9,7 +9,7 @@ import styles from "./productlist.module.css";
 
 const ProductList = () => {
   return (
-    <section className={`container mt`}>
+    <>
       <h2 className={`title-medium blue`}>Сплит системы</h2>
       <Swiper
         className={styles.productList}
@@ -35,7 +35,7 @@ const ProductList = () => {
           <ProductCard />
         </SwiperSlide>
       </Swiper>
-    </section>
+    </>
   );
 };
 

@@ -1,7 +1,7 @@
+import CategoryList from "@/app/components/CategoryList/CategoryList";
 import About from "@/parts/AboutCompany/About";
 import Advantages from "@/parts/Advantages/Advantages";
 import Banner from "@/parts/Banner/Banner";
-import CatalogList from "@/parts/CatalogList/CatalogList";
 import NewsList from "@/parts/NewsList/NewsList";
 import ProductList from "@/parts/ProductList/ProductList";
 import Slider from "@/parts/Slider/Slider";
@@ -10,9 +10,11 @@ const MainPage = () => {
   return (
     <div>
       <Slider />
-      <ProductList />
+      <section className="container mt">
+        <ProductList />
+      </section>
       <About />
-      <CatalogList />
+      {/* <CategoryList /> */}
       <Advantages />
       <Banner />
       <NewsList />

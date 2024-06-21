@@ -3,6 +3,7 @@ import { Manrope } from "next/font/google";
 import "./globals.css";
 import HeaderMenu from "@/parts/HeaderMenu/HeaderMenu";
 import Footer from "@/parts/Footer/Footer";
+import "dotenv/config";
 
 const inter = Manrope({ subsets: ["latin"] });
 

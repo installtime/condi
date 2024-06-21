@@ -1,0 +1,22 @@
+.postContainer figure {
+  margin: 0;
+}
+
+.postContainer img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.productPageContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 0px;
+  margin-bottom: 80px;
+}
+
+.productContainerDetails {
+  grid-column: span 3;
+}
