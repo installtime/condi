@@ -1,0 +1,29 @@
+.catalogList {
+  position: relative;
+  height: 100%;
+}
+
+.catalogListContainer {
+  height: auto;
+  background-color: var(--light-gray);
+  position: sticky;
+  top: 150px;
+  padding: 0 20px 20px 20px;
+  border-radius: 10px;
+}
+
+.categoryList {
+  display: flex;
+  flex-direction: column;
+}
+
+.parentCategory {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.categoryListItem {
+  margin-bottom: 10px;
+}

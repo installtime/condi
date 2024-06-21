@@ -2,6 +2,7 @@
 import ProductCard from "@/app/components/ProductCard/ProductCard";
 import styles from "./catalog.module.css";
 import Image from "next/image";
+import CategoryList from "@/app/components/CategoryList/CategoryList";
 const CatalogPage = () => {
   return (
     <>
@@ -24,73 +25,7 @@ const CatalogPage = () => {
         <span>Главная - сплит ситемы</span>
       </section>
       <section className={`container mt ${styles.catalog}`}>
-        <div className={styles.catalogList}>
-          <div className={styles.catalogListContainer}>
-            <ul className={styles.categoryList}>
-              <li>
-                <span className={styles.parentCategory}>
-                  Сплит-системы Haier
-                </span>
-                <ul className={`border-bottom ${styles.categoryList}`}>
-                  <li className={styles.categoryListItem}>
-                    Настенные кондиционеры
-                  </li>
-                  <li className={styles.categoryListItem}>
-                    Напольные сплит-системы
-                  </li>
-                  <li className={styles.categoryListItem}>
-                    Сплит-системы для промышленных зданий
-                  </li>
-                  <li className={styles.categoryListItem}>
-                    Универсальные сплит-системы
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <ul className={styles.categoryList}>
-              <li>
-                <span className={styles.parentCategory}>
-                  Сплит-системы Haier
-                </span>
-                <ul className={`border-bottom ${styles.categoryList}`}>
-                  <li className={styles.categoryListItem}>
-                    Настенные кондиционеры
-                  </li>
-                  <li className={styles.categoryListItem}>
-                    Напольные сплит-системы
-                  </li>
-                  <li className={styles.categoryListItem}>
-                    Сплит-системы для промышленных зданий
-                  </li>
-                  <li className={styles.categoryListItem}>
-                    Универсальные сплит-системы
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <ul className={styles.categoryList}>
-              <li>
-                <span className={styles.parentCategory}>
-                  Сплит-системы Haier
-                </span>
-                <ul className={`border-bottom ${styles.categoryList}`}>
-                  <li className={styles.categoryListItem}>
-                    Настенные кондиционеры
-                  </li>
-                  <li className={styles.categoryListItem}>
-                    Напольные сплит-системы
-                  </li>
-                  <li className={styles.categoryListItem}>
-                    Сплит-системы для промышленных зданий
-                  </li>
-                  <li className={styles.categoryListItem}>
-                    Универсальные сплит-системы
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <CategoryList />
         <div className={styles.catalogProducts}>
           <h2 className={`title-medium blue`}>СПЛИТ-СИСТЕМЫ HAIER</h2>
           <div className={styles.productList}>

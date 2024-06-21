@@ -21,9 +21,21 @@ li {
   padding: 0;
 }
 
+h1 {
+  font-size: 55px;
+}
+
+h2 {
+  font-size: 45px;
+}
+
 ul,
 li {
   list-style: none;
+}
+
+figure {
+  margin: 0;
 }
 
 .title-big {
@@ -102,12 +114,13 @@ button {
 }
 
 .container {
-  margin-left: 15rem;
-  margin-right: 15rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
 @media screen and (max-width: 740px) {
   .container {
+    max-width: auto;
     margin: 0 1.25rem;
   }
 }
