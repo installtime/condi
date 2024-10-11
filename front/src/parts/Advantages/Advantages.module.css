@@ -2,8 +2,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  gap: 20px;
   height: auto;
 }
 
@@ -40,7 +39,7 @@
 .bannerDescSection {
   position: absolute;
   z-index: 1;
-  width: 100%;
+  width: auto;
   height: auto;
   bottom: 40px;
   padding-left: 50px;
@@ -72,4 +71,34 @@
   margin: 0.5rem 0;
   font-size: 18px;
   font-weight: bold;
+}
+
+@media screen and (max-width: 1000px) {
+  .advantagesList {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .advantagesListBanner {
+    height: 300px;
+  }
+
+  .bannerDescSection {
+    position: absolute;
+    z-index: 1;
+    width: auto;
+    height: 50%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .bannerDescSection h2 {
+    font-size: 25px;
+  }
 }

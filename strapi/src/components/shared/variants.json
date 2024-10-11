@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_variants",
+  "info": {
+    "displayName": "variants"
+  },
+  "options": {},
+  "attributes": {
+    "power": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

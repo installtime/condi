@@ -2,7 +2,13 @@
   position: fixed;
   top: 20px;
   z-index: 1000;
-  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+.HeaderMenuLinkItem a {
+  text-decoration: none;
+  color: white;
 }
 
 .headerMenuContainer {
@@ -35,6 +41,8 @@
 }
 
 .headerContacts {
+  display: flex;
+  align-items: center;
 }
 
 .headerContactsBtn {
@@ -48,4 +56,62 @@
   background-color: white;
   color: black;
   padding: 1rem;
+}
+
+.contactsPhones {
+  margin-left: 2rem;
+  text-align: right;
+}
+
+.contactsPhones a {
+  display: block;
+  color: white;
+}
+
+.mobileMenuContainer {
+  display: none;
+}
+
+.mobileList {
+  display: none;
+}
+
+@media screen and (max-width: 890px) {
+  .mobileMenuContainer {
+    display: block;
+  }
+
+  .headerMenuContainer {
+    margin: 0;
+  }
+
+  .headerContainer {
+    left: 20px;
+    right: 20px;
+    margin: 0;
+  }
+
+  .mobileList {
+    display: block;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1001;
+  }
+
+  .headerContacts {
+    display: none;
+  }
+  .HeaderMenuLinksContaiener {
+    display: none;
+  }
+
+  .sliderDescription {
+    font-size: 35px;
+    line-height: 35px;
+  }
 }

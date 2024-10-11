@@ -1,0 +1,16 @@
+.accordionButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--main-blue);
+  margin-top: 2rem;
+}
+
+.accordionButton {
+  padding: 1rem;
+}
+
+.accordionInfo {
+  background-color: var(--light-gray);
+  padding: 1rem;
+}

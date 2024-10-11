@@ -3,7 +3,7 @@ import styles from "./Advantages.module.css";
 import Image from "next/image";
 const Advantages = () => {
   return (
-    <section className={`container mt`}>
+    <section className={`container`}>
       <div className={styles.advantagesList}>
         <div className={styles.advantagesListBanner}>
           <div className={styles.bannerDescSection}>

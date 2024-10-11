@@ -3,21 +3,20 @@ import About from "@/parts/AboutCompany/About";
 import Advantages from "@/parts/Advantages/Advantages";
 import Banner from "@/parts/Banner/Banner";
 import NewsList from "@/parts/NewsList/NewsList";
+import Partners from "@/parts/Partners/Partners";
 import ProductList from "@/parts/ProductList/ProductList";
 import Slider from "@/parts/Slider/Slider";
 
-const MainPage = () => {
+const MainPage = ({ recommended }: any) => {
   return (
     <div>
       <Slider />
-      <section className="container mt">
-        <ProductList />
-      </section>
-      <About />
-      {/* <CategoryList /> */}
       <Advantages />
+      <ProductList recommended={recommended} />
+      <About />
       <Banner />
       <NewsList />
+      <Partners />
     </div>
   );
 };
