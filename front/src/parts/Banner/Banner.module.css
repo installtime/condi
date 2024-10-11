@@ -4,9 +4,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-
+  gap: 20px;
   position: relative;
   overflow: hidden;
   -webkit-box-shadow: -1px 4px 28px 8px rgba(34, 60, 80, 0.16);
@@ -29,7 +27,6 @@
 .bannerInfo {
   z-index: 1;
   grid-column: 9 / span 4;
-  height: 100%;
   background-color: var(--main-blue);
   padding: 40px;
   color: white;
@@ -52,4 +49,29 @@
   color: white;
   font-size: 14px;
   font-weight: bold;
+}
+
+.bannerTitle {
+  font-size: 40px;
+}
+
+@media screen and (max-width: 1200px) {
+  .bannerCard {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+  .bannerInfo {
+    grid-column: 1;
+    grid-row: 3 / span 4;
+    height: 100%;
+    background-color: var(--main-blue);
+    padding: 25px;
+    color: white;
+  }
+
+  .bannerTitle {
+    font-size: 25px;
+    line-height: 30px;
+  }
 }

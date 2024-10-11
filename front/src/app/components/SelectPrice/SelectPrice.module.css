@@ -1,0 +1,14 @@
+.priceBlockContainer {
+  margin-top: 2rem;
+}
+.priceBlock {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 30px;
+  margin: 1rem 0;
+}
+
+.priceBlock span {
+  display: block;
+}

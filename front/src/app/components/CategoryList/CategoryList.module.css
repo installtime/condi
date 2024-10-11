@@ -27,3 +27,39 @@
 .categoryListItem {
   margin-bottom: 10px;
 }
+
+.categoryListItem a {
+  text-decoration: none;
+  color: black;
+}
+
+.mobileCategoryList {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .catalog {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 20px;
+    margin-bottom: 80px;
+  }
+
+  .catalogProducts {
+    grid-column: span 1;
+  }
+
+  .productList {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  .mobileCategoryList {
+    display: block;
+    position: relative;
+  }
+}

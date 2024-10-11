@@ -1,0 +1,22 @@
+.contacsInfoContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.contactsList {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactsList li {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contactsList a {
+  text-decoration: none;
+  color: inherit;
+}

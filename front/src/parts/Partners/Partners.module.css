@@ -1,0 +1,16 @@
+.swiperCardPartners {
+  background-color: var(--main-blue);
+}
+
+.PartnerLogoContainer {
+  height: 150px;
+  padding: 4rem 3rem;
+  display: block;
+}
+
+.PartnersImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}

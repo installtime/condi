@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_tabs",
+  "info": {
+    "displayName": "Tabs",
+    "icon": "archive",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "information": {
+      "type": "customField",
+      "options": {
+        "preset": "default"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    }
+  }
+}

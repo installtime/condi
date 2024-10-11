@@ -38,6 +38,15 @@ figure {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section:not(:last-child) {
+  margin-bottom: 80px;
+}
+
 .title-big {
   font-size: 55px;
   line-height: 55px;
@@ -114,13 +123,44 @@ button {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1700px;
+  padding: 0 40px;
   margin: auto;
 }
 
-@media screen and (max-width: 740px) {
+/* Основные стили */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Стили для заголовков */
+th {
+  background-color: #004ea2;
+  color: white;
+}
+
+/* Чередующиеся строки */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Стили для hover */
+tr:hover {
+  background-color: #d4d4d4;
+}
+
+@media screen and (max-width: 1250px) {
   .container {
     max-width: auto;
     margin: 0 1.25rem;
+    padding: 0;
   }
 }

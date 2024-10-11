@@ -1,6 +1,7 @@
 .productCard {
   display: flex;
   flex-direction: column;
+  text-decoration: none;
 }
 
 .productCardImageGallery {
@@ -39,9 +40,9 @@
 }
 
 .productTitle {
+  color: var(--main-blue);
   font-size: 18px;
   font-weight: 600;
-  color: var(--main-blue);
 }
 
 .productPrice {

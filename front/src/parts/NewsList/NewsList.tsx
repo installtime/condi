@@ -6,13 +6,29 @@ import styles from "./NewsList.module.css";
 import Link from "next/link";
 const NewsList = () => {
   return (
-    <section className={`mt ${styles.sectionContainer}`}>
+    <section>
       <div className={`container`}>
-        <h2 className={`title-medium white ${styles.newsListTitle}`}>
-          Новости
-        </h2>
+        <h2 className={`title-medium blue ${styles.newsListTitle}`}>Новости</h2>
 
-        <Swiper spaceBetween={20} slidesPerView={4} grabCursor={true}>
+        <Swiper
+          spaceBetween={10}
+          slidesPerView={1}
+          grabCursor={true}
+          breakpoints={{
+            480: {
+              spaceBetween: 20,
+              slidesPerView: 2,
+            },
+            1000: {
+              spaceBetween: 20,
+              slidesPerView: 3,
+            },
+            1200: {
+              spaceBetween: 20,
+              slidesPerView: 4,
+            },
+          }}
+        >
           <SwiperSlide className={styles.newsCardSlide}>
             <div className={styles.newsCardContainer}>
               <h3>Последние события</h3>

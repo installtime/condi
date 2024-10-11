@@ -2,13 +2,36 @@
 import styles from "./headermenu.module.css";
 import Image from "next/image";
 import Logo from "@/app/Images/Logo";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useScroll, motion, useMotionValueEvent, easeIn } from "framer-motion";
 import Link from "next/link";
 import Popup from "@/app/components/Popup/Popup";
+import { createPortal } from "react-dom";
 
 const HeaderMenu = () => {
   const [visible, setVisible] = useState(true);
+
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    // Устанавливаем флаг, что компонент смонтирован на клиенте
+    setIsMounted(true);
+  }, []);
+
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const handleClick = (e: MouseEvent) => {
+      if (ref.current && ref.current.contains(e.target as Node)) {
+        setMobileOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleClick);
+
+    return () => document.removeEventListener("click", handleClick);
+  }, [mobileOpen]);
 
   const [position, setPosition] = useState(0);
   const { scrollY } = useScroll();
@@ -29,30 +52,68 @@ const HeaderMenu = () => {
       y: "-100%",
     },
   };
+
+  const variantsSec = {
+    open: { opacity: 1, x: 0 },
+    closed: {
+      opacity: 0,
+      x: "-100%",
+    },
+  };
+
   return (
-    <motion.nav
-      style={
-        visible
-          ? {
-              display: "block",
-            }
-          : { display: "none" }
-      }
-      className={`${styles.headerContainer}`}
+    <motion.header
+      className={`container ${styles.headerContainer}`}
       animate={visible ? "open" : "closed"}
       variants={variants}
     >
-      <div className={`container ${styles.headerMenuContainer}`}>
+      <nav className={`container ${styles.headerMenuContainer}`}>
         <Link href={`/`} className={styles.HeaderMenuLogo}>
           <Logo />
         </Link>
         <ul className={styles.HeaderMenuLinksContaiener}>
-          <li className={styles.HeaderMenuLinkItem}>О НАС</li>
-          <li className={styles.HeaderMenuLinkItem}>Каталог</li>
-          <li className={styles.HeaderMenuLinkItem}>Бизнесу</li>
-          <li className={styles.HeaderMenuLinkItem}>Новости</li>
-          <li className={styles.HeaderMenuLinkItem}>Контакты</li>
+          <li className={styles.HeaderMenuLinkItem}>
+            <Link href={"/about"}>О нас</Link>
+          </li>
+          <li className={styles.HeaderMenuLinkItem}>
+            <Link href={"/catalog"}>Каталог</Link>
+          </li>
+          <li className={styles.HeaderMenuLinkItem}>
+            <Link href={"/busines"}>Бизнесу</Link>
+          </li>
+          <li className={styles.HeaderMenuLinkItem}>
+            <Link href={"/delivery"}>Доставка и оплата</Link>
+          </li>
+          <li className={styles.HeaderMenuLinkItem}>
+            <Link href={"/posts"}>Новости</Link>
+          </li>
+          <li className={styles.HeaderMenuLinkItem}>
+            <Link href={"/contacts"}>Контакты</Link>
+          </li>
         </ul>
+        <div
+          className={styles.mobileMenuContainer}
+          onClick={() => setMobileOpen(!mobileOpen)}
+        >
+          |||
+        </div>
+
+        {isMounted &&
+          createPortal(
+            <motion.div
+              initial={false}
+              animate={mobileOpen ? "open" : "closed"}
+              variants={variantsSec}
+              className={styles.mobileList}
+            >
+              <div onClick={() => setMobileOpen(false)}>Close Button</div>
+              <Link ref={ref} href={"/catalog"}>
+                Привет
+              </Link>
+            </motion.div>,
+            document.body
+          )}
+
         <div className={styles.headerContacts}>
           <Popup
             isOpen={false}
@@ -74,9 +135,15 @@ const HeaderMenu = () => {
               </div>
             </div>
           </Popup>
+
+          <div className={styles.contactsPhones}>
+            <a href="tel:7999 999 999">+7 (999) 999-99-99</a>
+            <a href="tel:7999 999 999">+7 (999) 999-99-99</a>
+            <a href="mailto:test@yandex.ru">test@yandex.ru</a>
+          </div>
         </div>
-      </div>
-    </motion.nav>
+      </nav>
+    </motion.header>
   );
 };
 

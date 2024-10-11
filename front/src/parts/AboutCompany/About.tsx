@@ -4,7 +4,7 @@ import Image from "next/image";
 import Logo from "@/app/Images/Logo";
 const About = () => {
   return (
-    <section className={`container mt`}>
+    <section className={`container`}>
       <div className={styles.sectionContainer}>
         <div className={styles.bigCard}>
           <div className={styles.cardImageContainer}>

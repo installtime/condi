@@ -3,7 +3,7 @@ import styles from "./Banner.module.css";
 import Image from "next/image";
 const Banner = () => {
   return (
-    <section className={`container mt`}>
+    <section className={`container`}>
       <div className={styles.bannerCard}>
         <div className={styles.bannerImageContainer}>
           <Image
@@ -20,7 +20,7 @@ const Banner = () => {
           <div className={styles.bannerTextContainer}>
             <span>СИСТЕМЫ КОНДИЦИОНИРОВАНИЯ</span>
             <h2 className={`title-medium ${styles.bannerTitle}`}>
-              ПЕРЕДОВЫЕ ТЕХНОЛОГИИ
+              ДЛЯ ЮРИДИЧЕСКИХ ЛИЦ
             </h2>
             <p>
               Haier постоянно совершенствует свою продукцию, инвестируя в том
